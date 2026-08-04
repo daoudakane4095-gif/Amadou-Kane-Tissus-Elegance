@@ -9,8 +9,8 @@
 <style>
 :root{
     --black:#080808;
-    --dark:#111111;
-    --card:#171717;
+    --dark:#111;
+    --card:#181818;
     --gold:#d4af37;
     --gold-light:#f5df8a;
     --white:#fff;
@@ -31,7 +31,7 @@ html{
 body{
     background:var(--black);
     color:var(--white);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     line-height:1.6;
 }
 
@@ -42,14 +42,14 @@ header{
     z-index:1000;
     background:rgba(8,8,8,.96);
     backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(212,175,55,.5);
+    border-bottom:1px solid var(--gold);
     padding:18px 15px;
     text-align:center;
 }
 
 .logo{
     color:var(--gold);
-    font-size:1.55rem;
+    font-size:1.6rem;
     font-weight:800;
     letter-spacing:2px;
     text-transform:uppercase;
@@ -58,21 +58,22 @@ header{
 .subtitle{
     color:var(--gray);
     font-size:.85rem;
-    margin-top:3px;
+    margin-top:4px;
 }
 
 /* HERO */
 .hero{
-    min-height:500px;
+    min-height:520px;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     padding:60px 20px;
+
     background:
-        linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.88)),
-        url("image/0c4f55ff-f2c9-4f54-a1aa-c56aff12b1ce.jpeg")
-        center/cover;
+        linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.90)),
+        url("0c4f55ff-f2c9-4f54-a1aa-c56aff12b1ce.jpeg")
+        center/cover no-repeat;
 }
 
 .hero-content{
@@ -91,7 +92,7 @@ header{
 }
 
 .hero h1{
-    font-size:clamp(2.2rem,8vw,4.5rem);
+    font-size:clamp(2.3rem,8vw,4.5rem);
     line-height:1.05;
     margin-bottom:18px;
 }
@@ -102,7 +103,7 @@ header{
 
 .hero p{
     color:#ddd;
-    max-width:600px;
+    max-width:620px;
     margin:auto;
     font-size:1rem;
 }
@@ -118,7 +119,7 @@ header{
 .btn{
     display:inline-block;
     padding:13px 20px;
-    border-radius:7px;
+    border-radius:8px;
     text-decoration:none;
     font-weight:bold;
     transition:.3s;
@@ -152,7 +153,7 @@ header{
 
 /* SECTION */
 .section{
-    padding:55px 0 15px;
+    padding:55px 0 20px;
 }
 
 .section-heading{
@@ -203,6 +204,7 @@ header{
     height:280px;
     object-fit:cover;
     display:block;
+    background:#222;
 }
 
 .card-content{
@@ -280,6 +282,7 @@ footer p{
     margin:6px 0;
 }
 
+/* MOBILE */
 @media(max-width:600px){
 
     .hero{
@@ -335,8 +338,8 @@ footer p{
 
         <p>
             Découvrez notre sélection de Gezner et de tissus
-            brodés de prestige, soigneusement choisis pour
-            vos tenues élégantes.
+            de prestige, soigneusement choisis pour vos tenues
+            élégantes.
         </p>
 
         <div class="hero-buttons">
@@ -363,158 +366,321 @@ footer p{
 
     <div class="section-heading">
         <span>Notre collection</span>
-        <h2>Gezner</h2>
-        <p>Gezner Super Magnum</p>
+        <h2>Gezner Super Magnum</h2>
+        <p>Découvrez nos tissus disponibles en boutique</p>
     </div>
 
     <div class="products">
 
+        <!-- 1 -->
         <div class="card">
-            <img src="image/0c4f55ff-f2c9-4f54-a1aa-c56aff12b1ce.jpeg">
+            <img src="0c4f55ff-f2c9-4f54-a1aa-c56aff12b1ce.jpeg" alt="Tissu Gezner 1">
             <div class="card-content">
                 <div class="category">Gezner</div>
-                <h3>Collection Gezner</h3>
+                <h3>Gezner Super Magnum</h3>
                 <div class="price">Sur demande</div>
-                <a class="whatsapp"
-                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
-                   target="_blank">
-                   Commander
-                </a>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%201." target="_blank">Commander</a>
             </div>
         </div>
 
+        <!-- 2 -->
         <div class="card">
-            <img src="image/1985c093-6297-45b1-9834-960d9522c5ff.jpeg">
+            <img src="1985c093-6297-45b1-9834-960d9522c5ff.jpeg" alt="Tissu Gezner 2">
             <div class="card-content">
                 <div class="category">Gezner</div>
-                <h3>Collection Gezner</h3>
+                <h3>Gezner Super Magnum</h3>
                 <div class="price">Sur demande</div>
-                <a class="whatsapp"
-                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
-                   target="_blank">
-                   Commander
-                </a>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%202." target="_blank">Commander</a>
             </div>
         </div>
 
+        <!-- 3 -->
         <div class="card">
-            <img src="image/1996d1bf-b6f7-427e-97be-9868aef67662.jpeg">
+            <img src="1996d1bf-b6f7-427e-97be-9868aef67662.jpeg" alt="Tissu Gezner 3">
             <div class="card-content">
                 <div class="category">Gezner</div>
-                <h3>Collection Gezner</h3>
+                <h3>Gezner Super Magnum</h3>
                 <div class="price">Sur demande</div>
-                <a class="whatsapp"
-                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
-                   target="_blank">
-                   Commander
-                </a>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%203." target="_blank">Commander</a>
             </div>
         </div>
 
+        <!-- 4 -->
         <div class="card">
-            <img src="image/2d4d023e-d3bf-4059-85e8-5dfe00974393.jpeg">
+            <img src="2d4d023e-d3bf-4059-85e8-5dfe00974393.jpeg" alt="Tissu Gezner 4">
             <div class="card-content">
                 <div class="category">Gezner</div>
-                <h3>Collection Gezner</h3>
+                <h3>Gezner Super Magnum</h3>
                 <div class="price">Sur demande</div>
-                <a class="whatsapp"
-                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
-                   target="_blank">
-                   Commander
-                </a>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%204." target="_blank">Commander</a>
             </div>
         </div>
 
+        <!-- 5 -->
         <div class="card">
-            <img src="image/414c0d0c-be37-4ec4-bce1-7b9adcf80fdf.jpeg">
+            <img src="414c0d0c-be37-4ec4-bce1-7b9adcf80fdf.jpeg" alt="Tissu Gezner 5">
             <div class="card-content">
                 <div class="category">Gezner</div>
-                <h3>Collection Gezner</h3>
+                <h3>Gezner Super Magnum</h3>
                 <div class="price">Sur demande</div>
-                <a class="whatsapp"
-                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
-                   target="_blank">
-                   Commander
-                </a>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%205." target="_blank">Commander</a>
             </div>
         </div>
 
+        <!-- 6 -->
         <div class="card">
-            <img src="image/4966e7fc-95d6-4c4d-b97b-5e94827e1f17.jpeg">
+            <img src="4966e7fc-95d6-4c4d-b97b-5e94827e1f17.jpeg" alt="Tissu Gezner 6">
             <div class="card-content">
                 <div class="category">Gezner</div>
-                <h3>Collection Gezner</h3>
+                <h3>Gezner Super Magnum</h3>
                 <div class="price">Sur demande</div>
-                <a class="whatsapp"
-                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
-                   target="_blank">
-                   Commander
-                </a>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%206." target="_blank">Commander</a>
             </div>
         </div>
 
+        <!-- 7 -->
         <div class="card">
-            <img src="image/5cd9d4db-5f89-446b-8096-80c619f6355d.jpeg">
+            <img src="5cd9d4db-5f89-446b-8096-80c619f6355d.jpeg" alt="Tissu Gezner 7">
             <div class="card-content">
                 <div class="category">Gezner</div>
-                <h3>Collection Gezner</h3>
+                <h3>Gezner Super Magnum</h3>
                 <div class="price">Sur demande</div>
-                <a class="whatsapp"
-                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
-                   target="_blank">
-                   Commander
-                </a>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%207." target="_blank">Commander</a>
             </div>
         </div>
 
+        <!-- 8 -->
         <div class="card">
-            <img src="image/5f2d8fa9-4b87-4c3d-8c3b-47fdc0251a67.jpeg">
+            <img src="5f2d8fa9-4b87-4c3d-8c3b-47fdc0251a67.jpeg" alt="Tissu Gezner 8">
             <div class="card-content">
                 <div class="category">Gezner</div>
-                <h3>Collection Gezner</h3>
+                <h3>Gezner Super Magnum</h3>
                 <div class="price">Sur demande</div>
-                <a class="whatsapp"
-                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
-                   target="_blank">
-                   Commander
-                </a>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%208." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card">
+            <img src="646ffc7d-cec1-416a-8e41-3de6b4f892fe.jpeg" alt="Tissu Gezner 9">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%209." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="card">
+            <img src="69514849-f90e-43dc-b4bf-4417bddd2f0b.jpeg" alt="Tissu Gezner 10">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2010." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="card">
+            <img src="6ed6a3fa-5dd3-4111-be80-f66fa863939f.jpeg" alt="Tissu Gezner 11">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2011." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="card">
+            <img src="7400fa5f-19d6-4da4-b1a3-866c3d5e97a8.jpeg" alt="Tissu Gezner 12">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2012." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="card">
+            <img src="8521fbaa-7ed6-42d3-9a66-9a26e239a799.jpeg" alt="Tissu Gezner 13">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2013." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="card">
+            <img src="95bc0616-52fb-4244-a6b9-1274e8e6a7a1.jpeg" alt="Tissu Gezner 14">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2014." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="card">
+            <img src="96054ccd-49fc-4ea3-bbd3-99d1415f1367.jpeg" alt="Tissu Gezner 15">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2015." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="card">
+            <img src="a0c1f24c-b753-4261-ad05-09db9dcf3c40.jpeg" alt="Tissu Gezner 16">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2016." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="card">
+            <img src="a294d493-bf89-42fe-9f9f-419102987a62.jpeg" alt="Tissu Gezner 17">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2017." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="card">
+            <img src="b01b9d83-7485-485e-ab0b-3e6fb79c1c00.jpeg" alt="Tissu Gezner 18">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2018." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="card">
+            <img src="b16ec511-10ae-4863-9ca1-7f029fe6c390.jpeg" alt="Tissu Gezner 19">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2019." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="card">
+            <img src="bcde26db-f6be-4636-b441-cec8419f10fe.jpeg" alt="Tissu Gezner 20">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2020." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 21 -->
+        <div class="card">
+            <img src="c349109e-52f8-4f00-a1b7-4c1f8409b845.jpeg" alt="Tissu Gezner 21">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2021." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 22 -->
+        <div class="card">
+            <img src="caffe509-2d58-4a20-a2e4-c42a7b6255e1.jpeg" alt="Tissu Gezner 22">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2022." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 23 -->
+        <div class="card">
+            <img src="db91e1c4-6687-43b0-a943-20f286fb4070.jpeg" alt="Tissu Gezner 23">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2023." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 24 -->
+        <div class="card">
+            <img src="cd281933-cd3e-4868-9988-f37700ce182d.jpeg" alt="Tissu Gezner 24">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2024." target="_blank">Commander</a>
+            </div>
+        </div>
+
+        <!-- 25 -->
+        <div class="card">
+            <img src="f7759349-b436-42aa-847a-7784e248bee4.jpeg" alt="Tissu Gezner 25">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Gezner Super Magnum</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Gezner%2025." target="_blank">Commander</a>
             </div>
         </div>
 
     </div>
-
 </section>
 
+<!-- BOUTIQUE -->
 <section class="info">
 
     <h2>📍 Notre boutique</h2>
 
     <p>
-        Venez découvrir nos tissus directement à notre boutique
-        à Dakar, Sénégal.
+        Retrouvez Amadou Kane à Dakar, Sénégal.
     </p>
 
     <a class="btn btn-gold"
        href="https://maps.apple.com/place?coordinate=14.758603,-17.395171&name=Ma%20position&map=explore"
        target="_blank">
-       Voir la boutique sur la carte
+        Voir la boutique sur la carte
     </a>
 
 </section>
 
+<!-- WHATSAPP -->
 <section class="info">
 
-    <h2>Besoin d'un renseignement ?</h2>
+    <h2>💬 Besoin d'un renseignement ?</h2>
 
     <p>
         Contactez-nous directement sur WhatsApp pour connaître
-        les disponibilités et les prix.
+        les prix et les disponibilités.
     </p>
 
     <a class="btn btn-gold"
        href="https://wa.me/221776569673"
        target="_blank">
-       Contacter Amadou Kane
+        Contacter Amadou Kane
     </a>
 
 </section>
