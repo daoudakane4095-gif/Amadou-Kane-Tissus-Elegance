@@ -1,467 +1,543 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amadou Kane — Tissus & Élégance</title>
-  <meta name="description" content="Amadou Kane — Tissus & Élégance à Dakar. Gezner, Thioub et tissus premium.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>Amadou Kane — Tissus & Élégance</title>
 
-    body {
-      font-family: Georgia, serif;
-      background: #f7f3eb;
-      color: #171717;
-    }
+<style>
+:root{
+    --black:#080808;
+    --dark:#111111;
+    --card:#171717;
+    --gold:#d4af37;
+    --gold-light:#f5df8a;
+    --white:#fff;
+    --gray:#aaa;
+    --green:#25d366;
+}
 
-    header {
-      background: #090909;
-      color: #d9a441;
-      padding: 18px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    .logo {
-      font-size: 25px;
-      font-weight: bold;
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
+body{
+    background:var(--black);
+    color:var(--white);
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+}
 
-    .hero {
-      min-height: 560px;
-      padding: 90px 8%;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(90deg, #080808 15%, rgba(8,8,8,.75), rgba(8,8,8,.15)),
-        url("https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?auto=format&fit=crop&w=1600&q=80")
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,8,8,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(212,175,55,.5);
+    padding:18px 15px;
+    text-align:center;
+}
+
+.logo{
+    color:var(--gold);
+    font-size:1.55rem;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.subtitle{
+    color:var(--gray);
+    font-size:.85rem;
+    margin-top:3px;
+}
+
+/* HERO */
+.hero{
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.88)),
+        url("image/0c4f55ff-f2c9-4f54-a1aa-c56aff12b1ce.jpeg")
         center/cover;
-      color: white;
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid var(--gold);
+    color:var(--gold-light);
+    padding:7px 15px;
+    border-radius:30px;
+    font-size:.75rem;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(2.2rem,8vw,4.5rem);
+    line-height:1.05;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    color:#ddd;
+    max-width:600px;
+    margin:auto;
+    font-size:1rem;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:center;
+    margin-top:28px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 20px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#080808;
+}
+
+.btn-gold:hover{
+    background:var(--gold-light);
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid var(--gold);
+    color:var(--gold-light);
+}
+
+.btn-outline:hover{
+    background:var(--gold);
+    color:#000;
+}
+
+/* CONTAINER */
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+/* SECTION */
+.section{
+    padding:55px 0 15px;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.section-heading span{
+    color:var(--gold);
+    font-size:.75rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-heading h2{
+    font-size:2rem;
+    margin-top:5px;
+}
+
+.section-heading p{
+    color:var(--gray);
+    margin-top:8px;
+}
+
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:linear-gradient(145deg,#191919,#101010);
+    border:1px solid #292929;
+    border-radius:14px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:var(--gold);
+    box-shadow:0 12px 35px rgba(0,0,0,.5);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.card-content{
+    padding:17px;
+}
+
+.category{
+    color:var(--gold);
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+.card h3{
+    font-size:1rem;
+    margin:7px 0;
+}
+
+.price{
+    color:var(--gold-light);
+    font-weight:bold;
+    margin-bottom:14px;
+}
+
+.whatsapp{
+    display:block;
+    background:var(--green);
+    color:white;
+    text-align:center;
+    padding:11px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.whatsapp:hover{
+    opacity:.85;
+}
+
+/* INFO */
+.info{
+    margin:55px 0;
+    background:var(--card);
+    border:1px solid #292929;
+    border-radius:15px;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.info h2{
+    color:var(--gold);
+    margin-bottom:12px;
+}
+
+.info p{
+    color:#ccc;
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+    margin-top:60px;
+    padding:35px 20px;
+    text-align:center;
+    background:#111;
+    border-top:1px solid var(--gold);
+}
+
+footer strong{
+    color:var(--gold);
+}
+
+footer p{
+    color:var(--gray);
+    margin:6px 0;
+}
+
+@media(max-width:600px){
+
+    .hero{
+        min-height:520px;
     }
 
-    .hero-content {
-      max-width: 600px;
+    .products{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
     }
 
-    .small-title {
-      color: #d9a441;
-      letter-spacing: 3px;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      margin-bottom: 15px;
+    .card img{
+        height:210px;
     }
 
-    h1 {
-      font-size: 65px;
-      line-height: 1;
-      margin-bottom: 25px;
+    .card-content{
+        padding:12px;
     }
 
-    h1 span {
-      color: #d9a441;
-      font-style: italic;
+    .card h3{
+        font-size:.9rem;
     }
 
-    .hero p {
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 30px;
+    .price{
+        font-size:.9rem;
     }
 
-    .button {
-      display: inline-block;
-      padding: 15px 24px;
-      margin-right: 10px;
-      background: #d9a441;
-      color: #111;
-      text-decoration: none;
-      border-radius: 5px;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
+    .whatsapp{
+        font-size:.78rem;
+        padding:9px 5px;
     }
-
-    .button.dark {
-      background: transparent;
-      color: white;
-      border: 1px solid #d9a441;
-    }
-
-    section {
-      padding: 70px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 40px;
-    }
-
-    .gold {
-      color: #b88725;
-    }
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .category {
-      background: white;
-      padding: 35px 20px;
-      text-align: center;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      transition: .2s;
-    }
-
-    .category:hover {
-      transform: translateY(-5px);
-      border-color: #d9a441;
-    }
-
-    .category .icon {
-      font-size: 45px;
-      margin-bottom: 15px;
-    }
-
-    .category h3 {
-      margin-bottom: 10px;
-    }
-
-    .category p {
-      font-family: Arial, sans-serif;
-      color: #666;
-    }
-
-    .about {
-      background: #0b0b0b;
-      color: white;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .about h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
-
-    .about p {
-      font-family: Arial, sans-serif;
-      line-height: 1.8;
-      color: #ddd;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .product {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
-    }
-
-    .product img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-    }
-
-    .product-info {
-      padding: 20px;
-    }
-
-    .product-info h3 {
-      margin-bottom: 8px;
-    }
-
-    .price {
-      color: #b88725;
-      font-weight: bold;
-      font-family: Arial, sans-serif;
-      margin-bottom: 15px;
-    }
-
-    .whatsapp {
-      display: inline-block;
-      background: #111;
-      color: #d9a441;
-      padding: 10px 16px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #080808;
-      color: white;
-      padding: 50px 7%;
-      font-family: Arial, sans-serif;
-    }
-
-    footer h3 {
-      color: #d9a441;
-      margin-bottom: 15px;
-      font-family: Georgia, serif;
-    }
-
-    footer p {
-      color: #ccc;
-      line-height: 1.7;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-    }
-
-    .copyright {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #333;
-      text-align: center;
-      color: #888;
-    }
-
-    @media(max-width: 800px) {
-      nav {
-        display: none;
-      }
-
-      h1 {
-        font-size: 48px;
-      }
-
-      .categories,
-      .products,
-      .about,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: 650px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Amadou Kane</div>
-
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#catalogue">Catalogue</a>
-    <a href="#apropos">À propos</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <div class="logo">Amadou Kane</div>
+    <div class="subtitle">Tissus & Élégance — Dakar, Sénégal</div>
 </header>
 
-<section class="hero" id="accueil">
-  <div class="hero-content">
-    <div class="small-title">BIENVENUE CHEZ</div>
+<section class="hero">
 
-    <h1>
-      Amadou<br>
-      <span>Kane</span>
-    </h1>
+    <div class="hero-content">
+
+        <div class="badge">MAISON DE TISSUS • DAKAR</div>
+
+        <h1>
+            L'élégance<br>
+            <span>du tissu</span>
+        </h1>
+
+        <p>
+            Découvrez notre sélection de Gezner et de tissus
+            brodés de prestige, soigneusement choisis pour
+            vos tenues élégantes.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#catalogue" class="btn btn-gold">
+                Voir le catalogue
+            </a>
+
+            <a href="https://wa.me/221776569673"
+               target="_blank"
+               class="btn btn-outline">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<main class="container">
+
+<section class="section" id="catalogue">
+
+    <div class="section-heading">
+        <span>Notre collection</span>
+        <h2>Gezner</h2>
+        <p>Gezner Super Magnum</p>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="image/0c4f55ff-f2c9-4f54-a1aa-c56aff12b1ce.jpeg">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Collection Gezner</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp"
+                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
+                   target="_blank">
+                   Commander
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/1985c093-6297-45b1-9834-960d9522c5ff.jpeg">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Collection Gezner</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp"
+                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
+                   target="_blank">
+                   Commander
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/1996d1bf-b6f7-427e-97be-9868aef67662.jpeg">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Collection Gezner</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp"
+                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
+                   target="_blank">
+                   Commander
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/2d4d023e-d3bf-4059-85e8-5dfe00974393.jpeg">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Collection Gezner</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp"
+                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
+                   target="_blank">
+                   Commander
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/414c0d0c-be37-4ec4-bce1-7b9adcf80fdf.jpeg">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Collection Gezner</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp"
+                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
+                   target="_blank">
+                   Commander
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/4966e7fc-95d6-4c4d-b97b-5e94827e1f17.jpeg">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Collection Gezner</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp"
+                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
+                   target="_blank">
+                   Commander
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/5cd9d4db-5f89-446b-8096-80c619f6355d.jpeg">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Collection Gezner</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp"
+                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
+                   target="_blank">
+                   Commander
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/5f2d8fa9-4b87-4c3d-8c3b-47fdc0251a67.jpeg">
+            <div class="card-content">
+                <div class="category">Gezner</div>
+                <h3>Collection Gezner</h3>
+                <div class="price">Sur demande</div>
+                <a class="whatsapp"
+                   href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20intéressé%20par%20ce%20tissu%20Gezner."
+                   target="_blank">
+                   Commander
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="info">
+
+    <h2>📍 Notre boutique</h2>
 
     <p>
-      Tissus & Élégance — votre boutique de tissus
-      haut de gamme à Dakar. Gezner, Thioub,
-      brodés et bien plus encore.
+        Venez découvrir nos tissus directement à notre boutique
+        à Dakar, Sénégal.
     </p>
 
-    <a href="#catalogue" class="button">
-      Découvrir nos tissus
+    <a class="btn btn-gold"
+       href="https://maps.apple.com/place?coordinate=14.758603,-17.395171&name=Ma%20position&map=explore"
+       target="_blank">
+       Voir la boutique sur la carte
     </a>
 
-    <a
-      href="https://wa.me/221776569673?text=Bonjour%20Amadou%20Kane%2C%20je%20souhaite%20voir%20vos%20tissus."
-      class="button dark">
-      Commander sur WhatsApp
+</section>
+
+<section class="info">
+
+    <h2>Besoin d'un renseignement ?</h2>
+
+    <p>
+        Contactez-nous directement sur WhatsApp pour connaître
+        les disponibilités et les prix.
+    </p>
+
+    <a class="btn btn-gold"
+       href="https://wa.me/221776569673"
+       target="_blank">
+       Contacter Amadou Kane
     </a>
-  </div>
+
 </section>
 
-<section id="catalogue">
+</main>
 
-  <h2 class="section-title">
-    Nos <span class="gold">Catégories</span>
-  </h2>
-
-  <div class="categories">
-
-    <div class="category">
-      <div class="icon">🧵</div>
-      <h3>Gezner</h3>
-      <p>Tissus Gezner élégants et premium.</p>
-    </div>
-
-    <div class="category">
-      <div class="icon">👘</div>
-      <h3>Thioub</h3>
-      <p>Une sélection de Thioub pour vos tenues.</p>
-    </div>
-
-    <div class="category">
-      <div class="icon">✨</div>
-      <h3>Tissus brodés</h3>
-      <p>Des modèles raffinés pour vos occasions.</p>
-    </div>
-
-    <div class="category">
-      <div class="icon">👑</div>
-      <h3>Tissus premium</h3>
-      <p>Qualité et élégance au rendez-vous.</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="about" id="apropos">
-
-  <div>
-    <div class="small-title">À PROPOS DE NOUS</div>
-
-    <h2>
-      L'élégance commence
-      par le tissu.
-    </h2>
+<footer>
 
     <p>
-      Amadou Kane est une boutique spécialisée
-      dans la vente de tissus à Dakar, Sénégal.
-      Nous proposons une sélection de tissus
-      élégants pour vos différentes occasions.
+        Boutique <strong>Amadou Kane</strong>
     </p>
-  </div>
 
-  <div>
-    <h2 class="gold">Tissus & Élégance</h2>
     <p>
-      Notre objectif : vous proposer de beaux tissus,
-      un service de qualité et une expérience simple
-      pour commander directement sur WhatsApp.
+        Tissus & Élégance — Dakar, Sénégal
     </p>
-  </div>
 
-</section>
+    <p>
+        WhatsApp : +221 77 656 96 73
+    </p>
 
-<section>
-
-  <h2 class="section-title">
-    Nos <span class="gold">Nouveautés</span>
-  </h2>
-
-  <div class="products">
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=800&q=80">
-      <div class="product-info">
-        <h3>Gezner Royal</h3>
-        <div class="price">Prix sur demande</div>
-        <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Gezner%20Royal.">
-          Commander
-        </a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80">
-      <div class="product-info">
-        <h3>Thioub Prestige</h3>
-        <div class="price">Prix sur demande</div>
-        <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Thioub%20Prestige.">
-          Commander
-        </a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1601924928377-3e7e7a7b1b0c?auto=format&fit=crop&w=800&q=80">
-      <div class="product-info">
-        <h3>Tissu Premium</h3>
-        <div class="price">Prix sur demande</div>
-        <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20un%20tissu%20premium.">
-          Commander
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<footer id="contact">
-
-  <div class="footer-grid">
-
-    <div>
-      <h3>Amadou Kane</h3>
-      <p>
-        Tissus & Élégance.<br>
-        Votre boutique de tissus à Dakar.
-      </p>
-    </div>
-
-    <div>
-      <h3>Contact</h3>
-      <p>
-        📍 Dakar, Sénégal<br><br>
-        📱 +221 77 656 96 73
-      </p>
-    </div>
-
-    <div>
-      <h3>WhatsApp</h3>
-      <p>
-        Commandez directement auprès
-        de notre boutique.
-      </p>
-      <br>
-      <a
-        href="https://wa.me/221776569673"
-        class="button">
-        WhatsApp
-      </a>
-    </div>
-
-  </div>
-
-  <div class="copyright">
-    © 2026 Amadou Kane — Tissus & Élégance.
-    Tous droits réservés.
-  </div>
+    <p>
+        © 2026 Amadou Kane — Tous droits réservés
+    </p>
 
 </footer>
 
