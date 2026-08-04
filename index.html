@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amadou Kane — Tissus & Élégance</title>
+  <meta name="description" content="Amadou Kane — Tissus & Élégance à Dakar. Gezner, Thioub et tissus premium.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background: #f7f3eb;
+      color: #171717;
+    }
+
+    header {
+      background: #090909;
+      color: #d9a441;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 560px;
+      padding: 90px 8%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, #080808 15%, rgba(8,8,8,.75), rgba(8,8,8,.15)),
+        url("https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .small-title {
+      color: #d9a441;
+      letter-spacing: 3px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 65px;
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #d9a441;
+      font-style: italic;
+    }
+
+    .hero p {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      margin-right: 10px;
+      background: #d9a441;
+      color: #111;
+      text-decoration: none;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    .button.dark {
+      background: transparent;
+      color: white;
+      border: 1px solid #d9a441;
+    }
+
+    section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 40px;
+    }
+
+    .gold {
+      color: #b88725;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category {
+      background: white;
+      padding: 35px 20px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      transition: .2s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      border-color: #d9a441;
+    }
+
+    .category .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .category h3 {
+      margin-bottom: 10px;
+    }
+
+    .category p {
+      font-family: Arial, sans-serif;
+      color: #666;
+    }
+
+    .about {
+      background: #0b0b0b;
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+      color: #ddd;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .product img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #b88725;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      margin-bottom: 15px;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      background: #111;
+      color: #d9a441;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #080808;
+      color: white;
+      padding: 50px 7%;
+      font-family: Arial, sans-serif;
+    }
+
+    footer h3 {
+      color: #d9a441;
+      margin-bottom: 15px;
+      font-family: Georgia, serif;
+    }
+
+    footer p {
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .copyright {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      text-align: center;
+      color: #888;
+    }
+
+    @media(max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .categories,
+      .products,
+      .about,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Amadou Kane</div>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#catalogue">Catalogue</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="accueil">
+  <div class="hero-content">
+    <div class="small-title">BIENVENUE CHEZ</div>
+
+    <h1>
+      Amadou<br>
+      <span>Kane</span>
+    </h1>
+
+    <p>
+      Tissus & Élégance — votre boutique de tissus
+      haut de gamme à Dakar. Gezner, Thioub,
+      brodés et bien plus encore.
+    </p>
+
+    <a href="#catalogue" class="button">
+      Découvrir nos tissus
+    </a>
+
+    <a
+      href="https://wa.me/221776569673?text=Bonjour%20Amadou%20Kane%2C%20je%20souhaite%20voir%20vos%20tissus."
+      class="button dark">
+      Commander sur WhatsApp
+    </a>
+  </div>
+</section>
+
+<section id="catalogue">
+
+  <h2 class="section-title">
+    Nos <span class="gold">Catégories</span>
+  </h2>
+
+  <div class="categories">
+
+    <div class="category">
+      <div class="icon">🧵</div>
+      <h3>Gezner</h3>
+      <p>Tissus Gezner élégants et premium.</p>
+    </div>
+
+    <div class="category">
+      <div class="icon">👘</div>
+      <h3>Thioub</h3>
+      <p>Une sélection de Thioub pour vos tenues.</p>
+    </div>
+
+    <div class="category">
+      <div class="icon">✨</div>
+      <h3>Tissus brodés</h3>
+      <p>Des modèles raffinés pour vos occasions.</p>
+    </div>
+
+    <div class="category">
+      <div class="icon">👑</div>
+      <h3>Tissus premium</h3>
+      <p>Qualité et élégance au rendez-vous.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="apropos">
+
+  <div>
+    <div class="small-title">À PROPOS DE NOUS</div>
+
+    <h2>
+      L'élégance commence
+      par le tissu.
+    </h2>
+
+    <p>
+      Amadou Kane est une boutique spécialisée
+      dans la vente de tissus à Dakar, Sénégal.
+      Nous proposons une sélection de tissus
+      élégants pour vos différentes occasions.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="gold">Tissus & Élégance</h2>
+    <p>
+      Notre objectif : vous proposer de beaux tissus,
+      un service de qualité et une expérience simple
+      pour commander directement sur WhatsApp.
+    </p>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="section-title">
+    Nos <span class="gold">Nouveautés</span>
+  </h2>
+
+  <div class="products">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=800&q=80">
+      <div class="product-info">
+        <h3>Gezner Royal</h3>
+        <div class="price">Prix sur demande</div>
+        <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Gezner%20Royal.">
+          Commander
+        </a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80">
+      <div class="product-info">
+        <h3>Thioub Prestige</h3>
+        <div class="price">Prix sur demande</div>
+        <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Thioub%20Prestige.">
+          Commander
+        </a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1601924928377-3e7e7a7b1b0c?auto=format&fit=crop&w=800&q=80">
+      <div class="product-info">
+        <h3>Tissu Premium</h3>
+        <div class="price">Prix sur demande</div>
+        <a class="whatsapp" href="https://wa.me/221776569673?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20un%20tissu%20premium.">
+          Commander
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer id="contact">
+
+  <div class="footer-grid">
+
+    <div>
+      <h3>Amadou Kane</h3>
+      <p>
+        Tissus & Élégance.<br>
+        Votre boutique de tissus à Dakar.
+      </p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p>
+        📍 Dakar, Sénégal<br><br>
+        📱 +221 77 656 96 73
+      </p>
+    </div>
+
+    <div>
+      <h3>WhatsApp</h3>
+      <p>
+        Commandez directement auprès
+        de notre boutique.
+      </p>
+      <br>
+      <a
+        href="https://wa.me/221776569673"
+        class="button">
+        WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 Amadou Kane — Tissus & Élégance.
+    Tous droits réservés.
+  </div>
+
+</footer>
+
+</body>
+</html>
